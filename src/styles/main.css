@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-family: "Cormorant SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.title {
+    margin-top: 25px;
+}
+
+.catchphrase {
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.page-greeting {
+    font-family: "Cormorant SC", serif;
+    font-weight: 600;
+    font-size: 275%;
+    text-align:center;
+    color: #EFF2C0;
+    background-color: #A52422;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    /* text-transform: uppercase; */
+}
+
+header {
+    text-align: center;
+    color: #EFF2C0;
+    background-color: #A52422;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    color: #EFF2C0;
+    background-color: #A52422; 
+    margin-top: 25px;
+    padding: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #EFF2C0;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    gap: 20px; /* Espacement entre les liens */
+    list-style: none;
+    padding: 10px;
+    border-top:1px solid #EFF2C0;
+    border-bottom:1px solid #EFF2C0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #EFF2C0;
+    font-family: "Red Hat Text", sans-serif;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+p, a, span {
+    font-family: "Red Hat Text", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #EFF2C0;
+}
+
+.about {
+    max-width: 800px;
+    margin: 0 auto; 
+    text-align: justify; 
+    padding-top: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+}

@@ -1,0 +1,74 @@
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    background: #D7CC9F;
+}
+
+.carousel-content {
+    margin-bottom: 20px;
+}
+
+.carousel-content h3 {
+    font-size: 1.5rem;
+    color: #080F0F;
+}
+
+.carousel-content p {
+    font-size: 1.25rem;
+    color: #080F0F;
+}
+
+.carousel-link {
+    margin: 25px;
+}
+
+.carousel-link a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.carousel-link button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: #A52422;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.carousel-link button:hover {
+    background: #B26550;
+}
+
+.carousel-controls {
+    display: flex;
+    gap: 15px;
+}
+
+.carousel-controls button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: #A52422;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.carousel-controls button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.carousel-controls button:hover:not(:disabled) {
+    background: #B26550;
+}

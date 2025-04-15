@@ -1,0 +1,150 @@
+/* Conteneur principal */
+.style-matcher {
+    text-align: center;
+    width: 90%;
+    margin: 25px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Question */
+.question-container h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Options de réponse */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: #f8f8f8;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.options label:hover {
+    background: #fae0e0;
+}
+
+.options input {
+    accent-color: #A52422;
+}
+
+/* Boutons de navigation */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.navigation-buttons button {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background: #A52422;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.navigation-buttons button:hover {
+    background: #B26550;
+}
+
+.navigation-buttons button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Résultats */
+.result-container h3 {
+    font-size: 22px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.result-container p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Œuvres recommandées */
+.recommended-artworks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Artwork Card */
+.artwork-card {
+    width: 250px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+}
+
+.artwork-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.artwork-card h4 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.artwork-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.artwork-card button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Bouton pour refaire le test */
+.result-container button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background: #A52422;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.result-container button:hover {
+    background: #B26550;
+}
