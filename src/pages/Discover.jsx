@@ -9,6 +9,12 @@ function Discover() {
     const [artworks, setArtworks] = useState([]);
     const [sortOrder, setSortOrder] = useState("asc");
     const [currentPage, setCurrentPage] = useState(1);
+    const [onlyOnView, setOnlyOnView] = useState(() => {
+        // garder le filtre actif même après un refresh de page
+        const saved = localStorage.getItem("onlyOnView");
+        return saved === "true";
+    });
+
     const artworksPerPage = 10;
 
     // Charger les oeuvres selon la page
@@ -41,6 +47,11 @@ function Discover() {
         }
     });
 
+    // Appliquer le filtre "en exposition"
+    const filteredArtworks = sortedArtworks.filter((artwork) =>
+        onlyOnView ? artwork.is_on_view : true
+    );
+
     // Changer de page
     const nextPage = () => setCurrentPage((prev) => prev + 1);
     const prevPage = () => setCurrentPage((prev) => Math.max(1, prev - 1));
@@ -54,15 +65,27 @@ function Discover() {
                 <Sort sortOrder={sortOrder} onSortChange={setSortOrder} />
             </div>
 
-            {/* Affichage des oeuvres */}
-            {artworks.length > 0 ? (
+            {/* Filtre en exposition */}
+            <div className="filter-container">
+                <label>
+                    <input
+                        type="checkbox"
+                        checked={onlyOnView}
+                        onChange={(e) => setOnlyOnView(e.target.checked)}
+                    />
+                    Show only artworks currently on view
+                </label>
+            </div>
+
+            {/* Affichage */}
+            {filteredArtworks.length > 0 ? (
                 <div className="artworks-container">
-                    {sortedArtworks.map((artwork) => (
+                    {filteredArtworks.map((artwork) => (
                         <ArtworkCard key={artwork.id} artwork={artwork} />
                     ))}
                 </div>
             ) : (
-                <p>Loading artworks...</p>
+                <p>No artworks found for the selected criteria.</p>
             )}
 
             {/* Pagination */}
